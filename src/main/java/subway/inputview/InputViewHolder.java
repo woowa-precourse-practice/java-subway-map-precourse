@@ -11,6 +11,8 @@ public class InputViewHolder {
         inputViews.put(InputViewName.STATION_COMMAND, new StationCommandInputView());
         inputViews.put(InputViewName.STATION_INFO, new StationInfoInputView());
         inputViews.put(InputViewName.LINE_COMMAND, new LineCommandInputView());
+        inputViews.put(InputViewName.LINE_NAME, new LineNameInputView());
+        inputViews.put(InputViewName.LINE_STATION, new LineFirstStationToSaveInputView());
     }
 
     public static InputView get(InputViewName inputViewName) {

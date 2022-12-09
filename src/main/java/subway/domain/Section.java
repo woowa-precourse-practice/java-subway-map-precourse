@@ -2,6 +2,7 @@ package subway.domain;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 public class Section {
     private final Line line;
@@ -36,5 +37,22 @@ public class Section {
      */
     public void addStation(int index, String stationName) {
         stations.add(index, new Station(stationName));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Section section = (Section) o;
+        return line.equals(section.line) && stations.equals(section.stations);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(line, stations);
     }
 }
