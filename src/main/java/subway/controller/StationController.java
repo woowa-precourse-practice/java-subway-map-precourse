@@ -22,17 +22,25 @@ public class StationController implements Controller {
         outputView.print(model);
         StationCommand stationCommand = inputView.getInput(model);
 
-        if (stationCommand == StationCommand.SAVE) {
-            ControllerHolder.get(ControllerName.STATION_SAVE).process(model);
-        }
-        if (stationCommand == StationCommand.DELETE) {
-            ControllerHolder.get(ControllerName.STATION_DELETE).process(model);
-        }
+        saveStation(model, stationCommand);
+        deleteStation(model, stationCommand);
         if (stationCommand == StationCommand.FIND) {
-
+            ControllerHolder.get(ControllerName.STATION_FIND).process(model);
         }
         if (stationCommand == StationCommand.BACK) {
 
+        }
+    }
+
+    private static void deleteStation(Map<String, Object> model, StationCommand stationCommand) {
+        if (stationCommand == StationCommand.DELETE) {
+            ControllerHolder.get(ControllerName.STATION_DELETE).process(model);
+        }
+    }
+
+    private static void saveStation(Map<String, Object> model, StationCommand stationCommand) {
+        if (stationCommand == StationCommand.SAVE) {
+            ControllerHolder.get(ControllerName.STATION_SAVE).process(model);
         }
     }
 }

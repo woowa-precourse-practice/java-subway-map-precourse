@@ -11,6 +11,7 @@ public class OutputViewHolder {
         outputViews.put(OutputViewName.STATIONCOMMAND, new StationCommandOutputView());
         outputViews.put(OutputViewName.STATION_TO_SAVE, new StationToSaveOutputView());
         outputViews.put(OutputViewName.STATION_TO_DELETE, new StationToDeleteOutputView());
+        outputViews.put(OutputViewName.FIND_ALL_STATIONS, new FindingAllStationdOutpurView());
     }
 
     public static OutputView get(OutputViewName outputViewName) {

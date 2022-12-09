@@ -30,6 +30,9 @@ public class ControllerHolder {
                 OutputViewHolder.get(OutputViewName.STATION_TO_DELETE),
                 InputViewHolder.get(InputViewName.STATION_INFO)
         ));
+        controllers.put(ControllerName.STATION_FIND, new FindingStationController(
+                OutputViewHolder.get(OutputViewName.FIND_ALL_STATIONS)
+        ));
     }
 
     public static Controller get(ControllerName controllerName) {
