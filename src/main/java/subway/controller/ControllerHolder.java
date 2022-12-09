@@ -10,9 +10,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ControllerHolder {
-    private final Map<ControllerName, Controller> controllers = new HashMap<>();
+    private static final Map<ControllerName, Controller> controllers = new HashMap<>();
 
-    public ControllerHolder() {
+    static {
         controllers.put(ControllerName.SETUP, new SetupController());
         controllers.put(ControllerName.MAIN, new MainController(
                 InputViewHolder.get(InputViewName.MAIN),
@@ -22,9 +22,13 @@ public class ControllerHolder {
                 OutputViewHolder.get(OutputViewName.STATIONCOMMAND),
                 InputViewHolder.get(InputViewName.STATIONCOMMAND)
         ));
+        controllers.put(ControllerName.STATION_SAVE, new SavingStationController(
+                OutputViewHolder.get(OutputViewName.STATION_TO_SAVE),
+                InputViewHolder.get(InputViewName.STATION_INFO)
+        ));
     }
 
-    public Controller get(ControllerName controllerName) {
+    public static Controller get(ControllerName controllerName) {
         return controllers.get(controllerName);
     }
 }

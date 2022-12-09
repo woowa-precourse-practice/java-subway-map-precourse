@@ -2,6 +2,8 @@ package subway.controller;
 
 import subway.inputview.InputView;
 import subway.outputview.OutputView;
+import subway.service.StationService;
+import subway.system.ControllerName;
 import subway.vo.StationCommand;
 
 import java.util.Map;
@@ -19,6 +21,18 @@ public class StationController implements Controller {
     public void process(Map<String, Object> model) {
         outputView.print(model);
         StationCommand stationCommand = inputView.getInput(model);
-        model.put("stationCommand", stationCommand);
+
+        if (stationCommand == StationCommand.SAVE) {
+            ControllerHolder.get(ControllerName.STATION_SAVE).process(model);
+        }
+        if (stationCommand == StationCommand.DELETE) {
+
+        }
+        if (stationCommand == StationCommand.FIND) {
+
+        }
+        if (stationCommand == StationCommand.BACK) {
+
+        }
     }
 }

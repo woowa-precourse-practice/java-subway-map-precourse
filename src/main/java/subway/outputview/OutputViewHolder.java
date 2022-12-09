@@ -9,6 +9,7 @@ public class OutputViewHolder {
     static {
         outputViews.put(OutputViewName.MAIN, new MainOutputView());
         outputViews.put(OutputViewName.STATIONCOMMAND, new StationCommandOutputView());
+        outputViews.put(OutputViewName.STATION_TO_SAVE, new StationToSaveOutputView());
     }
 
     public static OutputView get(OutputViewName outputViewName) {

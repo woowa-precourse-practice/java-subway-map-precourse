@@ -1,5 +1,5 @@
 package subway.outputview;
 
 public enum OutputViewName {
-    STATIONCOMMAND, MAIN
+    STATIONCOMMAND, STATION_TO_SAVE, MAIN
 }
