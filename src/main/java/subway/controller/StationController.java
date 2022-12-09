@@ -2,7 +2,6 @@ package subway.controller;
 
 import subway.inputview.InputView;
 import subway.outputview.OutputView;
-import subway.service.StationService;
 import subway.system.ControllerName;
 import subway.vo.StationCommand;
 

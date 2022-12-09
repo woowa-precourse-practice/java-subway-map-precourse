@@ -1,7 +1,6 @@
 package subway.inputview;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class InputViewHolder {
@@ -9,8 +8,9 @@ public class InputViewHolder {
 
     static {
         inputViews.put(InputViewName.MAIN, new MainInputView());
-        inputViews.put(InputViewName.STATIONCOMMAND, new StationCommandInputView());
+        inputViews.put(InputViewName.STATION_COMMAND, new StationCommandInputView());
         inputViews.put(InputViewName.STATION_INFO, new StationInfoInputView());
+        inputViews.put(InputViewName.LINE_COMMAND, new LineCommandInputView());
     }
 
     public static InputView get(InputViewName inputViewName) {

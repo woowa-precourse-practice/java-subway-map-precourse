@@ -19,8 +19,8 @@ public class ControllerHolder {
                 OutputViewHolder.get(OutputViewName.MAIN)
         ));
         controllers.put(ControllerName.STATION, new StationController(
-                OutputViewHolder.get(OutputViewName.STATIONCOMMAND),
-                InputViewHolder.get(InputViewName.STATIONCOMMAND)
+                OutputViewHolder.get(OutputViewName.STATION_COMMAND),
+                InputViewHolder.get(InputViewName.STATION_COMMAND)
         ));
         controllers.put(ControllerName.STATION_SAVE, new SavingStationController(
                 OutputViewHolder.get(OutputViewName.STATION_TO_SAVE),
@@ -32,6 +32,10 @@ public class ControllerHolder {
         ));
         controllers.put(ControllerName.STATION_FIND, new FindingStationController(
                 OutputViewHolder.get(OutputViewName.FIND_ALL_STATIONS)
+        ));
+        controllers.put(ControllerName.LINE, new LineController(
+                OutputViewHolder.get(OutputViewName.LINE_COMMAND),
+                InputViewHolder.get(InputViewName.LINE_COMMAND)
         ));
     }
 

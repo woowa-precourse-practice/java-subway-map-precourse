@@ -1,5 +1,5 @@
 package subway.inputview;
 
 public enum InputViewName {
-    STATIONCOMMAND, STATION_INFO, MAIN
+    STATION_COMMAND, STATION_INFO, LINE_COMMAND, MAIN
 }
