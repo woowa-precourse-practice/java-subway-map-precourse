@@ -26,6 +26,10 @@ public class ControllerHolder {
                 OutputViewHolder.get(OutputViewName.STATION_TO_SAVE),
                 InputViewHolder.get(InputViewName.STATION_INFO)
         ));
+        controllers.put(ControllerName.STATION_DELETE, new DeletingStationController(
+                OutputViewHolder.get(OutputViewName.STATION_TO_DELETE),
+                InputViewHolder.get(InputViewName.STATION_INFO)
+        ));
     }
 
     public static Controller get(ControllerName controllerName) {

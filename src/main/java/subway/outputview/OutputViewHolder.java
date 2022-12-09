@@ -10,6 +10,7 @@ public class OutputViewHolder {
         outputViews.put(OutputViewName.MAIN, new MainOutputView());
         outputViews.put(OutputViewName.STATIONCOMMAND, new StationCommandOutputView());
         outputViews.put(OutputViewName.STATION_TO_SAVE, new StationToSaveOutputView());
+        outputViews.put(OutputViewName.STATION_TO_DELETE, new StationToDeleteOutputView());
     }
 
     public static OutputView get(OutputViewName outputViewName) {

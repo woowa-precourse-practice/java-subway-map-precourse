@@ -26,7 +26,7 @@ public class StationController implements Controller {
             ControllerHolder.get(ControllerName.STATION_SAVE).process(model);
         }
         if (stationCommand == StationCommand.DELETE) {
-
+            ControllerHolder.get(ControllerName.STATION_DELETE).process(model);
         }
         if (stationCommand == StationCommand.FIND) {
 
