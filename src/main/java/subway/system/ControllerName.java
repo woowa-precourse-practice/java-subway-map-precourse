@@ -1,5 +1,5 @@
 package subway.system;
 
 public enum ControllerName {
-    MAIN, SETUP
+    MAIN, STATION, SETUP
 }

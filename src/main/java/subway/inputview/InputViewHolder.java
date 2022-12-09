@@ -9,6 +9,7 @@ public class InputViewHolder {
 
     static {
         inputViews.put(InputViewName.MAIN, new MainInputView());
+        inputViews.put(InputViewName.STATIONCOMMAND, new StationCommandInputView());
     }
 
     public static InputView get(InputViewName inputViewName) {

@@ -18,6 +18,10 @@ public class ControllerHolder {
                 InputViewHolder.get(InputViewName.MAIN),
                 OutputViewHolder.get(OutputViewName.MAIN)
         ));
+        controllers.put(ControllerName.STATION, new StationController(
+                OutputViewHolder.get(OutputViewName.STATIONCOMMAND),
+                InputViewHolder.get(InputViewName.STATIONCOMMAND)
+        ));
     }
 
     public Controller get(ControllerName controllerName) {

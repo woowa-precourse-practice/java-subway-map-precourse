@@ -1,7 +1,6 @@
 package subway.outputview;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class OutputViewHolder {
@@ -9,6 +8,7 @@ public class OutputViewHolder {
 
     static {
         outputViews.put(OutputViewName.MAIN, new MainOutputView());
+        outputViews.put(OutputViewName.STATIONCOMMAND, new StationCommandOutputView());
     }
 
     public static OutputView get(OutputViewName outputViewName) {
