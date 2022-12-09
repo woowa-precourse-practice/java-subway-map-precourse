@@ -14,6 +14,13 @@ public class ControllerHolder {
 
     static {
         controllers.put(ControllerName.SETUP, new SetupController());
+        initializeSubMainControllers();
+        initializeStationControllers();
+        initializeLineControllers();
+        controllers.put(ControllerName.SECTION_SAVE, new SavingSectionController());
+    }
+
+    private static void initializeSubMainControllers() {
         controllers.put(ControllerName.MAIN, new MainController(
                 InputViewHolder.get(InputViewName.MAIN),
                 OutputViewHolder.get(OutputViewName.MAIN)
@@ -22,11 +29,14 @@ public class ControllerHolder {
                 OutputViewHolder.get(OutputViewName.STATION_COMMAND),
                 InputViewHolder.get(InputViewName.STATION_COMMAND)
         ));
-        initializeStationControllers();
         controllers.put(ControllerName.LINE, new LineController(
                 OutputViewHolder.get(OutputViewName.LINE_COMMAND),
                 InputViewHolder.get(InputViewName.LINE_COMMAND)
         ));
+        controllers.put(ControllerName.SECTION, new SectionController());
+    }
+
+    private static void initializeLineControllers() {
         controllers.put(ControllerName.LINE_SAVE, new SavingLineController());
         controllers.put(ControllerName.LINE_DELETE, new DeletingLineController());
         controllers.put(ControllerName.LINE_FIND, new FindingLineController());

@@ -23,5 +23,10 @@ public class SectionRepository {
         Section section = findByLineName(lineName);
         sections.remove(section);
     }
+
+    public static void addStationAt(Line line, Station station, int order) {
+        Section section = findByLineName(line.getName());
+        section.addStation(order, station);
+    }
 }
 

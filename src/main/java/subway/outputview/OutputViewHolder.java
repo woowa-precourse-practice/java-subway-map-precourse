@@ -9,6 +9,14 @@ public class OutputViewHolder {
     static {
         outputViews.put(OutputViewName.MAIN, new MainOutputView());
         initializeStationOutputViews();
+        initializeLineOutputViews();
+        outputViews.put(OutputViewName.SECTION_COMMAND, new SectionCommandOutputView());
+        outputViews.put(OutputViewName.SECTION_SAVE_LINE, new SectionLineToSaveOutputView());
+        outputViews.put(OutputViewName.SECTION_SAVE_STATION, new SectionStationToSaceOutputView());
+        outputViews.put(OutputViewName.SECTION_SAVE_ORDER, new SectionOrderToSaveOutputView());
+    }
+
+    private static void initializeLineOutputViews() {
         outputViews.put(OutputViewName.LINE_COMMAND, new LineCommandOutputView());
         outputViews.put(OutputViewName.LINE_SAVE, new LineNameToSaveOutputView());
         outputViews.put(OutputViewName.LINE_SAVE_FIRST_STATION, new LineFirstStationToSaveOutputView());

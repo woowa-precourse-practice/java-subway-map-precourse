@@ -18,17 +18,25 @@ public class FrontController {
 
     private void doProcess(MainCommand mainCommand, Map<String, Object> model) {
         doStationProcess(mainCommand, model);
-        if (mainCommand == MainCommand.LINE) {
-            ControllerHolder.get(ControllerName.LINE).process(model);
-        }
-        if (mainCommand == MainCommand.SECTION) {
-
-        }
+        doLineProcess(mainCommand, model);
+        doSectionProcess(mainCommand, model);
         if (mainCommand == MainCommand.PRINT) {
 
         }
         if (mainCommand == MainCommand.QUIT) {
 
+        }
+    }
+
+    private static void doSectionProcess(MainCommand mainCommand, Map<String, Object> model) {
+        if (mainCommand == MainCommand.SECTION) {
+            ControllerHolder.get(ControllerName.SECTION).process(model);
+        }
+    }
+
+    private static void doLineProcess(MainCommand mainCommand, Map<String, Object> model) {
+        if (mainCommand == MainCommand.LINE) {
+            ControllerHolder.get(ControllerName.LINE).process(model);
         }
     }
 

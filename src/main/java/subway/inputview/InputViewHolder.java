@@ -8,11 +8,21 @@ public class InputViewHolder {
 
     static {
         inputViews.put(InputViewName.MAIN, new MainInputView());
-        inputViews.put(InputViewName.STATION_COMMAND, new StationCommandInputView());
-        inputViews.put(InputViewName.STATION_INFO, new StationInfoInputView());
+        initializeStationInputViews();
+        initializeLineInputViews();
+        inputViews.put(InputViewName.SECTION_COMMAND, new SectionCommendInputView());
+        inputViews.put(InputViewName.SECTION_ORDER, new SectionOrderInputView());
+    }
+
+    private static void initializeLineInputViews() {
         inputViews.put(InputViewName.LINE_COMMAND, new LineCommandInputView());
         inputViews.put(InputViewName.LINE_NAME, new LineNameInputView());
         inputViews.put(InputViewName.LINE_STATION, new LineFirstStationToSaveInputView());
+    }
+
+    private static void initializeStationInputViews() {
+        inputViews.put(InputViewName.STATION_COMMAND, new StationCommandInputView());
+        inputViews.put(InputViewName.STATION_INFO, new StationInfoInputView());
     }
 
     public static InputView get(InputViewName inputViewName) {

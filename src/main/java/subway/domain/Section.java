@@ -39,6 +39,13 @@ public class Section {
         stations.add(index, new Station(stationName));
     }
 
+    /**
+     * 0부터 시작함에 주의
+     */
+    public void addStation(int index, Station station) {
+        stations.add(index, station);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
