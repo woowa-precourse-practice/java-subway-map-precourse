@@ -19,5 +19,9 @@ public class SectionRepository {
                 .orElseThrow(SectionNotFountException::new);
     }
 
+    public static void deleteSectionByLineName(String lineName) {
+        Section section = findByLineName(lineName);
+        sections.remove(section);
+    }
 }
 

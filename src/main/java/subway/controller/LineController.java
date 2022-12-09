@@ -25,7 +25,7 @@ public class LineController implements Controller {
             ControllerHolder.get(ControllerName.LINE_SAVE).process(model);
         }
         if (lineCommand == LineCommand.DELETE) {
-
+            ControllerHolder.get(ControllerName.LINE_DELETE).process(model);
         }
         if (lineCommand == LineCommand.FIND) {
 

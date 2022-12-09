@@ -28,6 +28,7 @@ public class ControllerHolder {
                 InputViewHolder.get(InputViewName.LINE_COMMAND)
         ));
         controllers.put(ControllerName.LINE_SAVE, new SavingLineController());
+        controllers.put(ControllerName.LINE_DELETE, new DeletingLineController());
     }
 
     private static void initializeStationControllers() {

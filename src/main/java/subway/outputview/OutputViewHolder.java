@@ -13,6 +13,8 @@ public class OutputViewHolder {
         outputViews.put(OutputViewName.LINE_SAVE, new LineNameToSaveOutputView());
         outputViews.put(OutputViewName.LINE_SAVE_FIRST_STATION, new LineFirstStationToSaveOutputView());
         outputViews.put(OutputViewName.LINE_SAVE_LAST_STATION, new LineLastStationToSaveOutputView());
+        outputViews.put(OutputViewName.LINE_DELETE, new LineToDeleteOutputView());
+        outputViews.put(OutputViewName.LINE_DELETE_COMPLETE, new LineDeletingCompletedOutputView());
     }
 
     private static void initializeStationOutputViews() {
