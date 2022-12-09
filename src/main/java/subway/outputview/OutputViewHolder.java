@@ -15,6 +15,7 @@ public class OutputViewHolder {
         outputViews.put(OutputViewName.LINE_SAVE_LAST_STATION, new LineLastStationToSaveOutputView());
         outputViews.put(OutputViewName.LINE_DELETE, new LineToDeleteOutputView());
         outputViews.put(OutputViewName.LINE_DELETE_COMPLETE, new LineDeletingCompletedOutputView());
+        outputViews.put(OutputViewName.FIND_ALL_LINES, new FindingAllLinesOutputView());
     }
 
     private static void initializeStationOutputViews() {

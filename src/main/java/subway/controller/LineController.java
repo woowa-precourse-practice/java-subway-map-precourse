@@ -21,14 +21,22 @@ public class LineController implements Controller {
     public void process(Map<String, Object> model) {
         outputView.print(model);
         LineCommand lineCommand = inputView.getInput(model);
-        if (lineCommand == LineCommand.SAVE) {
-            ControllerHolder.get(ControllerName.LINE_SAVE).process(model);
+        saveLine(model, lineCommand);
+        deleteLine(model, lineCommand);
+        if (lineCommand == LineCommand.FIND) {
+            ControllerHolder.get(ControllerName.LINE_FIND).process(model);
         }
+    }
+
+    private static void deleteLine(Map<String, Object> model, LineCommand lineCommand) {
         if (lineCommand == LineCommand.DELETE) {
             ControllerHolder.get(ControllerName.LINE_DELETE).process(model);
         }
-        if (lineCommand == LineCommand.FIND) {
+    }
 
+    private static void saveLine(Map<String, Object> model, LineCommand lineCommand) {
+        if (lineCommand == LineCommand.SAVE) {
+            ControllerHolder.get(ControllerName.LINE_SAVE).process(model);
         }
     }
 }

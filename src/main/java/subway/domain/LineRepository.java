@@ -30,6 +30,12 @@ public class LineRepository {
                 .orElseThrow(LineNotFoundException::new);
     }
 
+    public static List<String> findAllNames() {
+        return lines.stream()
+                .map(Line::getName)
+                .collect(Collectors.toList());
+    }
+
     public static boolean isAlreadyExistingByName(String lineName) {
         return lines.stream()
                 .map(Line::getName)

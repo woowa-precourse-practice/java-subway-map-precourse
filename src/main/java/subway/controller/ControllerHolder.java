@@ -29,6 +29,7 @@ public class ControllerHolder {
         ));
         controllers.put(ControllerName.LINE_SAVE, new SavingLineController());
         controllers.put(ControllerName.LINE_DELETE, new DeletingLineController());
+        controllers.put(ControllerName.LINE_FIND, new FindingLineController());
     }
 
     private static void initializeStationControllers() {
