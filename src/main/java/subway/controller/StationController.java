@@ -21,14 +21,14 @@ public class StationController implements Controller {
     public void process(Map<String, Object> model) {
         outputView.print(model);
         StationCommand stationCommand = inputView.getInput(model);
-
         saveStation(model, stationCommand);
         deleteStation(model, stationCommand);
+        findAllStations(model, stationCommand);
+    }
+
+    private static void findAllStations(Map<String, Object> model, StationCommand stationCommand) {
         if (stationCommand == StationCommand.FIND) {
             ControllerHolder.get(ControllerName.STATION_FIND).process(model);
-        }
-        if (stationCommand == StationCommand.BACK) {
-
         }
     }
 
